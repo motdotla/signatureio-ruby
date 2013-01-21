@@ -8,9 +8,9 @@ Gem::Specification.new do |gem|
   gem.version       = Signatureio::VERSION
   gem.authors       = ["scottmotte"]
   gem.email         = ["scott@scottmotte.com"]
-  gem.description   = %q{This gem is a wrapper for Signature.io's API.}
-  gem.summary       = %q{Use this wrapper gem to query Signature.io's API, create signable documents, view signed documents, and more.}
-  gem.homepage      = "https://www.signature.io"
+  gem.description   = %q{Ruby bindings for the Signature.io API.}
+  gem.summary       = %q{Signature.io is the easiest way to create signable documents online. See https://www.signature.io for details.}
+  gem.homepage      = "https://www.signature.io/api"
 
   gem.add_development_dependency "faraday"
   gem.add_development_dependency "faraday_middleware"
