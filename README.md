@@ -1,6 +1,6 @@
 # Signatureio Ruby Bindings
 
-This gem is a wrapper for Signature.io's API.
+This gem is a wrapper for [Signature.io](https://www.signature.io)'s API.
 
 ## Installation
 
