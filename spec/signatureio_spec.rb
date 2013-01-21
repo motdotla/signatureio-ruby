@@ -32,4 +32,13 @@ describe Signatureio do
     it { subject.secret_api_key.should eq secret_api_key }
     it { subject.api_endpoint.should eq "https://www.signature.io/api/v1" }
   end
+
+  describe "setting _root_url" do
+    before do
+      subject._root_url = "http://localhost:3000"
+    end
+
+    it { subject._root_url = "http://localhost:3000" }
+    it { subject.api_endpoint.should eq "http://localhost:3000/api/v1" }
+  end
 end

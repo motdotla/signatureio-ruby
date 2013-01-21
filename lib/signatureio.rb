@@ -51,8 +51,17 @@ module Signatureio
     0
   end
 
+  def _root_url=(_root_url)
+    @_root_url = _root_url
+  end
+
+  def _root_url
+    return @_root_url if @_root_url
+    "https://www.signature.io"
+  end
+
   def api_endpoint
-    ["https://www.signature.io/api/v", api_version].join
+    [_root_url, "/api/v", api_version].join
   end
 
   private
