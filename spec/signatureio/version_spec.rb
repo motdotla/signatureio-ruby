@@ -1,5 +1,5 @@
 require 'spec_helper'
 
 describe Signatureio do
-  it { Signatureio::VERSION.should eq "0.0.1" }
+  it { Signatureio::VERSION.should eq "0.0.2" }
 end

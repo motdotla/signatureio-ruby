@@ -12,8 +12,9 @@ Gem::Specification.new do |gem|
   gem.summary       = %q{Signature.io is the easiest way to create signable documents online. See https://www.signature.io for details.}
   gem.homepage      = "https://www.signature.io/api"
 
-  gem.add_development_dependency "faraday"
-  gem.add_development_dependency "faraday_middleware"
+  gem.add_dependency "faraday"
+  gem.add_dependency "faraday_middleware"
+  
   gem.add_development_dependency "pry"
   gem.add_development_dependency "rake"
   gem.add_development_dependency "rspec"
