@@ -14,6 +14,7 @@ Gem::Specification.new do |gem|
 
   gem.add_dependency "faraday"
   gem.add_dependency "faraday_middleware"
+  gem.add_dependency "recursive-open-struct"
   
   gem.add_development_dependency "pry"
   gem.add_development_dependency "rake"

@@ -1,7 +1,6 @@
 require "faraday"
 require "faraday_middleware"
-require "signatureio/extensions/try"
-require "signatureio/extensions/recursive_openstruct"
+require "recursive-open-struct"
 require "signatureio/version"
 require "signatureio/document"
 
