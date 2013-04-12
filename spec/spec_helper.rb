@@ -16,7 +16,6 @@ RSpec.configure do |config|
 end
 
 def set_secret_and_public_api_keys!
-  # These keys come form rspec@signature.io person.
   Signatureio.secret_api_key = ENV['SIGNATURE_SECRET_API_KEY']
   Signatureio.public_api_key = ENV['SIGNATURE_PUBLIC_API_KEY']
 end

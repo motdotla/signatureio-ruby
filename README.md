@@ -21,6 +21,8 @@ Then in your application initialize the gem:
     $ Signatureio.secret_api_key = "your_secret_api_key"
     $ Signatureio.public_api_key = "your_public_api_key"
 
+Alternatively, you can simply set the environment variables SIGNATURE_SECRET_API_KEY and SIGNATURE_PUBLIC_API_KEY on your machine. The rubygem will read it automatically so that you can skip the initialization.
+
 ## Usage
 
 ### Create Document
