@@ -12,7 +12,7 @@ module Signatureio
   end
 
   def request
-    @request
+    @request || setup_request!
   end
 
   def secret_api_key=(secret_api_key)
@@ -24,7 +24,7 @@ module Signatureio
 
   def secret_api_key
     return @secret_api_key if @secret_api_key
-    "missing_secret_api_key"
+    ENV['SIGNATURE_SECRET_API_KEY'] || "missing_secret_api_key"
   end
 
   def public_api_key=(public_api_key)
@@ -36,7 +36,7 @@ module Signatureio
 
   def public_api_key
     return @public_api_key if @public_api_key
-    "missing_public_api_key"
+    ENV['SIGNATURE_PUBLIC_API_KEY'] || "missing_public_api_key"
   end
 
   def api_version=(api_version)
@@ -80,5 +80,7 @@ module Signatureio
     end
 
     Signatureio.request.basic_auth(Signatureio.secret_api_key, '')
+
+    Signatureio.request
   end
 end

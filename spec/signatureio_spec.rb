@@ -12,8 +12,6 @@ describe Signatureio do
 
     it { subject.api_endpoint.should eq "https://www.signature.io/api/v0" }
     it { subject.api_version.should eq 0 }
-    it { subject.secret_api_key.should eq "missing_secret_api_key" }
-    it { subject.public_api_key.should eq "missing_public_api_key" }
   end
 
   describe "setting values" do

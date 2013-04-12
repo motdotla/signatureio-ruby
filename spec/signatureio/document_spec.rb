@@ -34,7 +34,7 @@ describe Signatureio::Document do
 
   context "correct secret api key" do
     before do
-      set_secret_and_public_api_keys!
+      Signatureio.secret_api_key = nil
     end
 
     describe ".create" do

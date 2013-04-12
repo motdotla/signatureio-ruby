@@ -8,7 +8,6 @@ Dir[File.expand_path(File.join(File.dirname(__FILE__),'support','**','*.rb'))].e
 RSpec.configure do |config|
   config.before(:suite) do
     # FakeWeb.allow_net_connect = false
-    set_secret_and_public_api_keys!
   end
 
   # config.after(:suite) do
