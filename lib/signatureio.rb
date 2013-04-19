@@ -3,6 +3,7 @@ require "faraday_middleware"
 require "recursive-open-struct"
 require "signatureio/version"
 require "signatureio/document"
+require "signatureio/event"
 
 module Signatureio
   extend self

@@ -39,12 +39,17 @@ Replace the url with a url of the PDF or Microsoft Word file you choose.
 
     $ Signatureio::Document.all
 
+### List Events
+
+    $ Signatureio::Event.all
+    $ Signatureio::Event.all({count: 1, offset: 1, type: "document.created"})
+
 ## Contributing
 
 1. Fork it
 2. Create your feature branch (`git checkout -b my-new-feature`)
-3. export SIGNATURE_SECRET_API_KEY="your_secret_api_key"
-4. export SIGNATURE_PUBLIC_API_KEY="your_public_api_key"
+3. export SIGNATURE_SECRET_API_KEY="your_test_secret_api_key"
+4. export SIGNATURE_PUBLIC_API_KEY="your_test_public_api_key"
 5. Commit your changes (`git commit -am 'Add some feature'`)
 6. Push to the branch (`git push origin my-new-feature`)
 7. Create new Pull Request
