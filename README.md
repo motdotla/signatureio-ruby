@@ -35,6 +35,12 @@ Replace the url with a url of the PDF or Microsoft Word file you choose.
 
     $ Signatureio::Document.retrieve("id_of_document")
 
+### Retrive Document Pages
+
+```bash
+$ Signatureio::Document.pages("id_of_document")
+```
+
 ### List Documents
 
     $ Signatureio::Document.all

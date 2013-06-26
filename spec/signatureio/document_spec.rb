@@ -111,5 +111,20 @@ describe Signatureio::Document do
         end
       end
     end
+
+    describe ".pages" do
+      before do
+        response = subject.create({:url => url})
+        @id = response.document.id
+        @response = subject.pages(@id)
+      end
+
+      context "default" do
+        it do
+          @response.success.should be_true
+          @response.pages.count.should >= 1
+        end
+      end
+    end
   end
 end
