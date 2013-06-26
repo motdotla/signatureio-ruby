@@ -1,0 +1,119 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Signatureio by signatureio</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Signatureio</h1>
+        <p>Ruby Bindings for Signature.io's API.</p>
+
+        <p class="view"><a href="https://github.com/signatureio/signatureio">View the Project on GitHub <small>signatureio/signatureio</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/signatureio/signatureio/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/signatureio/signatureio/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/signatureio/signatureio">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a name="signatureio-ruby-bindings" class="anchor" href="#signatureio-ruby-bindings"><span class="octicon octicon-link"></span></a>Signatureio Ruby Bindings</h1>
+
+<p>This gem is a wrapper for <a href="https://www.signature.io">Signature.io</a>'s API.</p>
+
+<h2>
+<a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation</h2>
+
+<p>Add this line to your application's Gemfile:</p>
+
+<pre><code>gem 'signatureio'
+</code></pre>
+
+<p>And then execute:</p>
+
+<pre><code>$ bundle
+</code></pre>
+
+<p>Or install it yourself as:</p>
+
+<pre><code>$ gem install signatureio
+</code></pre>
+
+<p>Then in your application initialize the gem:</p>
+
+<pre><code>$ Signatureio.secret_api_key = "your_secret_api_key"
+$ Signatureio.public_api_key = "your_public_api_key"
+</code></pre>
+
+<p>Alternatively, you can simply set the environment variables SIGNATURE_SECRET_API_KEY and SIGNATURE_PUBLIC_API_KEY on your machine. The rubygem will read it automatically so that you can skip the initialization.</p>
+
+<h2>
+<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<h3>
+<a name="create-document" class="anchor" href="#create-document"><span class="octicon octicon-link"></span></a>Create Document</h3>
+
+<pre><code>$ Signatureio::Document.create(:url =&gt; "https://www.signature.io/pdfs/sign-below.pdf")
+</code></pre>
+
+<p>Replace the url with a url of the PDF or Microsoft Word file you choose.</p>
+
+<h3>
+<a name="retrieve-document" class="anchor" href="#retrieve-document"><span class="octicon octicon-link"></span></a>Retrieve Document</h3>
+
+<pre><code>$ Signatureio::Document.retrieve("id_of_document")
+</code></pre>
+
+<h3>
+<a name="retrive-document-pages" class="anchor" href="#retrive-document-pages"><span class="octicon octicon-link"></span></a>Retrive Document Pages</h3>
+
+<div class="highlight"><pre><span class="nv">$ </span>Signatureio::Document.pages<span class="o">(</span><span class="s2">"id_of_document"</span><span class="o">)</span>
+</pre></div>
+
+<h3>
+<a name="list-documents" class="anchor" href="#list-documents"><span class="octicon octicon-link"></span></a>List Documents</h3>
+
+<pre><code>$ Signatureio::Document.all
+</code></pre>
+
+<h3>
+<a name="list-events" class="anchor" href="#list-events"><span class="octicon octicon-link"></span></a>List Events</h3>
+
+<pre><code>$ Signatureio::Event.all
+$ Signatureio::Event.all({count: 1, offset: 1, type: "document.created"})
+</code></pre>
+
+<h2>
+<a name="contributing" class="anchor" href="#contributing"><span class="octicon octicon-link"></span></a>Contributing</h2>
+
+<ol>
+<li>Fork it</li>
+<li>Create your feature branch (<code>git checkout -b my-new-feature</code>)</li>
+<li>export SIGNATURE_SECRET_API_KEY="your_test_secret_api_key"</li>
+<li>export SIGNATURE_PUBLIC_API_KEY="your_test_public_api_key"</li>
+<li>Commit your changes (<code>git commit -am 'Add some feature'</code>)</li>
+<li>Push to the branch (<code>git push origin my-new-feature</code>)</li>
+<li>Create new Pull Request</li>
+</ol>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/signatureio">signatureio</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
